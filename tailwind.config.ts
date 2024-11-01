@@ -30,12 +30,12 @@ export default {
       },
       colors: {
         primary: {
-          dark: '#191716', // Replace with your primary dark color
-          light: '#E0E2DB', // Replace with your primary light color (secondary color)
-          hero: '#587F3B', //Fern Green: #587F3B
+          dark: '#191716', // Eerie Black
+          light: '#E0E2DB', // Alabaster
+          hero: '#587F3B', //Fern Green
         },
         secondary: {
-          hero: '#a4672f', //Accessible Brown: #a4672f
+          hero: '#a4672f', //Accessible Brown
         }
       },
     },
