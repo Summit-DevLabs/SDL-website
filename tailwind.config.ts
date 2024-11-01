@@ -28,6 +28,16 @@ export default {
           { fontVariationSettings: '"wdth" 125' },
         ],
       },
+      colors: {
+        primary: {
+          dark: '#191716', // Replace with your primary dark color
+          light: '#E0E2DB', // Replace with your primary light color (secondary color)
+          hero: '#587F3B', //Fern Green: #587F3B
+        },
+        secondary: {
+          hero: '#a4672f', //Accessible Brown: #a4672f
+        }
+      },
     },
   },
   plugins: [],
