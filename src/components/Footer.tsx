@@ -35,6 +35,8 @@ function Navigation() {
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
+                    target={section.title === 'Connect' ? '_blank' : undefined}
+                    rel={section.title === 'Connect' ? 'noopener noreferrer' : undefined}
                     className="transition hover:text-neutral-950"
                   >
                     {link.title}
