@@ -79,6 +79,7 @@ export default function FAQ() {
           </dl>
         </div>
       </div>
+      <ContactSection />
     </div>
   )
 }
