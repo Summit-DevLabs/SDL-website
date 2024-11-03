@@ -7,21 +7,12 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GridList, GridListItem } from '@/components/GridList'
 import { PageIntro } from '@/components/PageIntro'
-import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+import imageShawnWilson from '@/images/team/shawn-wilson.jpg'
+import imageDavidCerniglia from '@/images/team/david-cerniglia.jpg'
+import imageJesseWalls from '@/images/team/jesse-walls.jpg'
+import imageJeremiahWilliams from '@/images/team/jeremiah-williams.jpg'
 import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
@@ -29,7 +20,7 @@ function Culture() {
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
         eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        title="Build with integrity, communicate with clarity, and trust in the journey."
         invert
       >
         <p>
@@ -38,17 +29,23 @@ function Culture() {
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Transparent Communication" invert>
+            <br></br>
+            We believe that open, honest dialogue is key to every successful project. 
+            Our team values clear and consistent communication, ensuring that our clients are informed 
+            and engaged at every step of the process.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Quality with Precision" invert>
+            <br></br>
+            Every line of code matters, and we’re dedicated to getting it right the first time.
+            We approach each project with a meticulous focus on quality, aiming to deliver solutions 
+            that meet the highest standards in functionality and design.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Trust and Integrity" invert>
+            <br></br>
+            We’re committed to building trust through transparency and accountability.
+            Integrity is the foundation of our team’s work — we’re dedicated to delivering 
+            on our promises and being upfront about challenges along the way.
           </GridListItem>
         </GridList>
       </Container>
@@ -58,72 +55,27 @@ function Culture() {
 
 const team = [
   {
-    title: 'Leadership',
-    people: [
-      {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
-  },
-  {
     title: 'Team',
     people: [
       {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
+        name: 'David Cerniglia',
+        title: 'Software Developer',
+        image: { src: imageDavidCerniglia },
       },
       {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
+        name: 'Shawn Wilson',
+        title: 'Software Developer',
+        image: { src: imageShawnWilson },
       },
       {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
+        name: 'Jesse Walls',
+        title: 'Software Developer',
+        image: { src: imageJesseWalls },
       },
       {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
+        name: 'Jeremiah Williams',
+        title: 'Software Developer',
+        image: { src: imageJeremiahWilliams },
       },
     ],
   },
@@ -160,8 +112,8 @@ function Team() {
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
                               {person.name}
                             </p>
-                            <p className="mt-2 text-sm text-white">
-                              {person.role}
+                            <p className="mt-1 text-sm text-white">
+                              {person.title}
                             </p>
                           </div>
                         </div>
@@ -189,44 +141,29 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About us" title="Driven by Purpose, Powered by Collaboration">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          Our strength lies in understanding our clients’ goals deeply, crafting each solution 
+          through a collaborative process that keeps their vision at the forefront of every decision.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Founded by four friends with a love for coding and collaboration, 
+            Summit DevLabs is all about close partnerships and creative problem-solving. 
+            We believe the best solutions come from truly understanding our clients’ goals 
+            and working together to bring them to life. Our journey began with a shared passion, 
+            and it thrives through the unique challenges and successes of our clients.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            At Summit DevLabs, you’re not just hiring developers — 
+            you’re gaining a team of dedicated partners, here to help you reach your digital summit.
           </p>
         </div>
       </PageIntro>
-      <Container className="mt-16">
-        <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
-        </StatList>
-      </Container>
 
       <Culture />
 
       <Team />
-
-      <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
-        pages={blogArticles}
-      />
 
       <ContactSection />
     </>
