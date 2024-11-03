@@ -7,7 +7,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: 'Summit DevLabs - %s',
-    default: 'Summit DevLabs',
+    default: 'Summit DevLabs - %s',
   },
 }
 
