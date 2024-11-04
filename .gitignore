@@ -129,5 +129,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+package-lock.json
+package.json
 # Ignore next-env.d.ts file
 next-env.d.ts

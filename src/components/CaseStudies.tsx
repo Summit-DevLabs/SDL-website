@@ -6,7 +6,7 @@ import { SectionIntro } from "./SectionIntro"
 
 
 
-function CaseStudies({
+export default function CaseStudies({
     caseStudies,
   }: {
     caseStudies: Array<MDXEntry<CaseStudy>>
