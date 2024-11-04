@@ -77,10 +77,10 @@ function ContactForm() {
             <fieldset>
               <legend className="text-base/6 text-neutral-500">Budget</legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
+                <RadioInput label="$0 – $1K" name="budget" value="1" />
+                <RadioInput label="$1K – $5K" name="budget" value="5" />
+                <RadioInput label="$5K – $25K" name="budget" value="25" />
+                <RadioInput label="More than $25K" name="budget" value="25+" />
               </div>
             </fieldset>
           </div>
@@ -100,8 +100,9 @@ function ContactDetails() {
         Our offices
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
-        addresses here for legal reasons.
+        Summit DevLabs operates remotely, with team members based in Pittsburgh, PA and Detroit, MI. 
+        While we may not have a traditional office, we’re always connected and ready to work 
+        with you, wherever you are.
       </p>
 
       <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
@@ -112,8 +113,7 @@ function ContactDetails() {
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
+            ['Careers', 'studiodevlabs@gmail.com'],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
