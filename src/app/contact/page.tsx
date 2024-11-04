@@ -10,8 +10,8 @@ import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 
-const metadata: Metadata = {
-  title: 'Contact Us',
+export const metadata: Metadata = {
+  title: 'TESTING',
   description: 'Let’s work together. We can’t wait to hear from you.',
 };
 
