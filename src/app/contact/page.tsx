@@ -11,7 +11,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 
 export const metadata: Metadata = {
-  title: 'TESTING',
+  title: 'Contact Us',
   description: 'Let’s work together. We can’t wait to hear from you.',
 };
 
