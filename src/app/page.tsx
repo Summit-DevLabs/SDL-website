@@ -116,7 +116,7 @@ export default async function Home() {
           </p>
         </FadeIn>
       </Container>
-      <Clients />
+      {/* <Clients /> */}
 
       {/* Use this section as a portfolio section in the future, alongside the Work page */}
       {/* <CaseStudies caseStudies={caseStudies} /> */}
