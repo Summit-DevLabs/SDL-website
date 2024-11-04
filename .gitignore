@@ -131,3 +131,5 @@ dist
 
 package-lock.json
 package.json
+# Ignore next-env.d.ts file
+next-env.d.ts
