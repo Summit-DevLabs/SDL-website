@@ -81,10 +81,10 @@ function Services() {
               Our expertise in web development ensures that your website not only looks stunning but is also optimized for performance and user experience. We work with various technologies to build responsive and dynamic websites.
             </ListItem>
             <ListItem title="E-commerce Solutions">
-              Unlock the potential of online sales with our custom e-commerce development services. We create seamless and secure online shopping experiences tailored to your business needs, leveraging platforms like Shopify, WooCommerce, and more.
+              Unlock the potential of online sales with our custom e-commerce development services. We create seamless and secure online shopping experiences tailored to your business needs, leveraging leading platforms like Shopify.
             </ListItem>
             <ListItem title="Digital Marketing">
-              Enhance your online presence with our comprehensive digital marketing strategies. Our team specializes in SEO, content marketing, social media management, and PPC campaigns to help your business reach its target audience effectively.
+              Enhance your online presence with our comprehensive digital marketing strategies. Our team specializes in SEO, content marketing, and modern design to help your business reach its target audience effectively.
             </ListItem>
             <ListItem title="Application Development">
               From concept to deployment, we develop mobile and web applications using cutting-edge technologies. Our goal is to build intuitive and engaging applications that provide real value to your users.
@@ -116,10 +116,11 @@ export default async function Home() {
           </p>
         </FadeIn>
       </Container>
+
+      {/* uncomment this section when we get more logos */}
       {/* <Clients /> */}
 
-      {/* Use this section as a portfolio section in the future, alongside the Work page */}
-      {/* <CaseStudies caseStudies={caseStudies} /> */}
+      <CaseStudies caseStudies={caseStudies} />
 
       <MissionStatement />
 
