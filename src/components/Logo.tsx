@@ -14,11 +14,11 @@ export function Logomark({
   let id = useId()
 
   return (
-    <svg viewBox="0 0 33 33" aria-hidden="true" {...props}>
+    <svg className='overflow-visible' viewBox="0 0 16 16" aria-hidden="true" {...props}>
       <image
         href={logoImage.src}
-        x="0"
-        y="1"
+        x="-33"
+        y="-7"
         width="100" // Adjust as needed
         height="32" // Adjust as needed
         preserveAspectRatio="xMinYMid meet"
@@ -65,7 +65,7 @@ export function Logo({
     <svg
       viewBox="0 0 235 32"
       aria-hidden="true"
-      className={clsx(fillOnHover && 'group/logo', className)}
+      className={clsx('overflow-visible', fillOnHover && 'group/logo', className)}
       {...props}    
     >     
       <Logomark
@@ -75,12 +75,12 @@ export function Logo({
       /> 
       <text
         x="66"
-        y="20"
+        y="22"
         fontFamily="Arial" // Change this to your preferred font
         fontSize="20" // Adjust the font size as needed
         fill={invert ? 'white' : 'black'} // Change text color based on invert
       >
-        | Summit Dev Labs
+        | Summit DevLabs
       </text>
     </svg>
   )
