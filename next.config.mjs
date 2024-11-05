@@ -13,9 +13,13 @@ import { unifiedConditional } from 'unified-conditional'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   output: "export",
-  images: {unoptimized: true},
+  images: {
+    unoptimized: true,
+  },
   basePath: "/SDL-website",
+  assetPrefix: "SDL-website",
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx']
 }
 
