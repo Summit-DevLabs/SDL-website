@@ -4,6 +4,13 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { StylizedImage } from '@/components/StylizedImage'
 import underConstruction from '@/images/under-construction.webp'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Under Construction',
+  description:
+    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+}
 
 export default function UnderConstruction() {
   return (
