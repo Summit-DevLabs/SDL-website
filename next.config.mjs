@@ -15,7 +15,7 @@ import { unifiedConditional } from 'unified-conditional'
 const nextConfig = {
   output: "export",
   images: {unoptimized: true},
-  reactStrictMode: true,
+  basePath: "/SDL-website",
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx']
 }
 
