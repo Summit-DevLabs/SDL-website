@@ -31,20 +31,20 @@ function Culture() {
         <GridList>
           <GridListItem title="Transparent Communication" invert>
             <br></br>
-            We believe that open, honest dialogue is key to every successful project. 
-            Our team values clear and consistent communication, ensuring that our clients are informed 
+            We believe that open, honest dialogue is key to every successful project.
+            Our team values clear and consistent communication, ensuring that our clients are informed
             and engaged at every step of the process.
           </GridListItem>
           <GridListItem title="Quality with Precision" invert>
             <br></br>
             Every line of code matters, and we’re dedicated to getting it right the first time.
-            We approach each project with a meticulous focus on quality, aiming to deliver solutions 
+            We approach each project with a meticulous focus on quality, aiming to deliver solutions
             that meet the highest standards in functionality and design.
           </GridListItem>
           <GridListItem title="Trust and Integrity" invert>
             <br></br>
             We’re committed to building trust through transparency and accountability.
-            Integrity is the foundation of our team’s work — we’re dedicated to delivering 
+            Integrity is the foundation of our team’s work — we’re dedicated to delivering
             on our promises and being upfront about challenges along the way.
           </GridListItem>
         </GridList>
@@ -59,23 +59,27 @@ const team = [
     people: [
       {
         name: 'David Cerniglia',
-        title: 'Software Developer',
+        title: 'Senior Software Developer',
         image: { src: imageDavidCerniglia },
+        founder: true,
       },
       {
         name: 'Shawn Wilson',
-        title: 'Software Developer',
+        title: 'Senior Software Developer',
         image: { src: imageShawnWilson },
+        founder: true,
       },
       {
         name: 'Jesse Walls',
-        title: 'Software Developer',
+        title: 'Dev Ops Engineer',
         image: { src: imageJesseWalls },
+        founder: true,
       },
       {
         name: 'Jeremiah Williams',
-        title: 'Software Developer',
+        title: 'Front-End Developer',
         image: { src: imageJeremiahWilliams },
+        founder: true,
       },
     ],
   },
@@ -112,8 +116,11 @@ function Team() {
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
                               {person.name}
                             </p>
-                            <p className="mt-1 text-sm text-white">
+                            <p className="mt-3 text-sm text-white">
                               {person.title}
+                            </p>
+                            <p className="text-sm text-white">
+                              {person?.founder ? 'Founder' : ''}
                             </p>
                           </div>
                         </div>
@@ -143,7 +150,7 @@ export default async function About() {
     <>
       <PageIntro eyebrow="About us" title="Driven by Purpose, Powered by Collaboration">
         <p>
-          Our strength lies in understanding our clients’ goals deeply, crafting each solution 
+          Our strength lies in understanding our clients’ goals deeply, crafting each solution
           through a collaborative process that keeps their vision at the forefront of every decision.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">

@@ -116,7 +116,7 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Delivery" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           As we approach the conclusion of the Build phase, we review each project 

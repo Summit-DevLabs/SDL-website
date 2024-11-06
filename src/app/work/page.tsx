@@ -11,7 +11,6 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
 import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
@@ -30,7 +29,7 @@ function CaseStudies({
     <Container className="mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Case studies
+          Some of our recent work
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
@@ -75,7 +74,7 @@ function CaseStudies({
                       href={caseStudy.href}
                       aria-label={`Read case study: ${caseStudy.client}`}
                     >
-                      Read case study
+                      Explore the site
                     </Button>
                   </div>
                   {caseStudy.testimonial && (
@@ -98,7 +97,7 @@ function CaseStudies({
 
 const clients = [
   ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
+  ['Family Fund', logoPhobia],
   ['Unseal', logoUnseal],
   ['Mail Smirk', logoMailSmirk],
   ['Home Work', logoHomeWork],
