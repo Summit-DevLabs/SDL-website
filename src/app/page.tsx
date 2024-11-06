@@ -10,7 +10,6 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import  CaseStudies  from '@/components/CaseStudies'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
@@ -20,7 +19,7 @@ import MissionStatement from '@/components/MissionStatement'
 
 const clients = [
   ['Trestle Glen Vineyards', logoPhobiaLight],
-  ['The Aligned Clinic', logoFamilyFund],
+  ['The Aligned Clinic', logoPhobiaLight],
   ['Michigan Memorial Funeral Home', logoUnseal],
 ]
 
