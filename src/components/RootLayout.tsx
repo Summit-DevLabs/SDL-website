@@ -214,7 +214,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           inert={expanded ? undefined : ''}
         >
           <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-primary-light pb-16 pt-14">
+            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
               <Header
                 invert
                 panelId={panelId}
