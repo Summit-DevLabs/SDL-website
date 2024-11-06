@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { sendToDiscord } from '@/lib/formHandler';
 import { Button } from '@/components/Button'
 import { FadeIn } from '@/components/FadeIn'
+import ConfirmationModal from './ConfirmationModal';
 
 function TextInput({
     label,
@@ -54,6 +55,7 @@ function TextInput({
     const [message, setMessage] = useState('');
     const [budget, setBudget] = useState('');
     const [errors, setErrors] = useState({name: '', email: '', company: '', phone: '', message: '', budget: ''});
+    const [isModalOpen, setIsModalOpen] = useState(false);
   
     const validate = () => {
       let tempErrors = { name: '', email: '', company: '', phone: '', message: '', budget: '' };
@@ -72,7 +74,7 @@ function TextInput({
       if (validate()) {
         try {
           await sendToDiscord(formData);
-          alert('Information sent successfully!');
+          setIsModalOpen(true);
         } catch (error) {
           alert('Failed to send information.');
         }
@@ -165,6 +167,7 @@ function TextInput({
             Let’s work together
           </Button>
         </form>
+        {isModalOpen && <ConfirmationModal onClose={() => setIsModalOpen(false)} />}
       </FadeIn>
     )
   }
