@@ -22,6 +22,7 @@ export function Logomark({
         width="100" // Adjust as needed
         height="32" // Adjust as needed
         preserveAspectRatio="xMinYMid meet"
+        style={{ filter: invert ? 'invert(1)' : 'none' }}
       />
       {/* <rect
         clipPath={`url(#${id}-clip)`}
