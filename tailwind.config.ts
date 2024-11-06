@@ -4,6 +4,11 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 export default {
   content: ['./src/**/*.{js,jsx,mdx,ts,tsx}'],
   theme: {
+    // backgroundColor: {
+    //   primary: {
+    //     light: '#E0E2DB', // Alabaster
+    //   },
+    // },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
@@ -42,3 +47,5 @@ export default {
   },
   plugins: [],
 } satisfies Config
+
+
