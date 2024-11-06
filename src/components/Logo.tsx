@@ -22,6 +22,7 @@ export function Logomark({
         width="100" // Adjust as needed
         height="32" // Adjust as needed
         preserveAspectRatio="xMinYMid meet"
+        style={{ filter: invert ? 'invert(1)' : 'none' }}
       />
       {/* <rect
         clipPath={`url(#${id}-clip)`}
@@ -80,7 +81,7 @@ export function Logo({
         fontSize="20" // Adjust the font size as needed
         fill={invert ? 'white' : 'black'} // Change text color based on invert
       >
-        | Summit DevLabs
+        | Summit <tspan fill='#587F3B'>Dev</tspan>Labs
       </text>
     </svg>
   )

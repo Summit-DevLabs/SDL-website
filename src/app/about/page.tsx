@@ -155,15 +155,15 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Founded by four friends with a love for coding and collaboration,
-            Summit DevLabs is all about close partnerships and creative problem-solving.
-            We believe the best solutions come from truly understanding our clients’ goals
-            and working together to bring them to life. Our journey began with a shared passion,
-            and it thrives through the unique challenges and successes of our clients.
+            Founded by four <span className='text-primary-hero'>friends</span> with a love for <span className='text-primary-hero'>coding</span> and collaboration, 
+            Summit <span className='text-primary-hero'>Dev</span>Labs is all about close partnerships and <span className='text-primary-hero'>creative</span> problem-solving. 
+            We believe the best solutions come from truly understanding our clients’ <span className='text-primary-hero'>goals </span> 
+            and working together to bring them to <span className='text-primary-hero'>life</span>. Our <span className='text-primary-hero'>journey</span> began with a shared <span className='text-primary-hero'>passion</span>, 
+            and it thrives through the unique challenges and successes of our <span className='text-primary-hero'>clients</span>.
           </p>
           <p>
-            At Summit DevLabs, you’re not just hiring developers —
-            you’re gaining a team of dedicated partners, here to help you reach your digital summit.
+            At Summit <span className='text-primary-hero'>Dev</span>Labs, you’re not just hiring developers — 
+            you’re gaining a <span className='text-primary-hero'>team</span> of dedicated <span className='text-primary-hero'>partners</span>, here to help you reach your digital <span className='text-primary-hero'>summit</span>.
           </p>
         </div>
       </PageIntro>

@@ -17,7 +17,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/SDL-website",
+  basePath: "",
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx']
 }
 
