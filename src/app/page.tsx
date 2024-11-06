@@ -60,7 +60,11 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We offer a wide range of services to meet your needs."
+        title={
+          <>
+            We offer a wide range of services to meet <span className='text-primary-hero'>your needs</span>.
+          </>
+        }
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>

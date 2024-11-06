@@ -155,10 +155,14 @@ function Values() {
 
       <SectionIntro
         eyebrow="Our values"
-        title="Trustworthy Solutions in a Dynamic World"
+        title={
+          <>
+            <span className='text-primary-hero'>Trustworthy</span> Solutions in a <span className='text-primary-hero'>Dynamic</span> World
+          </>
+        }
       >
         <p>
-          At Summit DevLabs, we cultivate a culture of trust by being 
+          At Summit <span className='text-primary-hero'>Dev</span>Labs, we cultivate a culture of trust by being 
           adaptable to the changing landscape of technology while honoring 
           the proven strategies that serve our clients best. Our commitment 
           to quality and reliability is at the heart of everything we do.
