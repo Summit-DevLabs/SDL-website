@@ -62,7 +62,7 @@ function ContactDetails() {
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
+      <PageIntro eyebrow="Contact us" title={ <>Let's work <span className='text-primary-hero'>together</span></> }>
         <p>We can’t wait to hear from you.</p>
       </PageIntro>
 

@@ -90,7 +90,7 @@ function Team() {
             <Border as={FadeIn} />
             <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                <h2 className="font-display text-2xl font-semibold text-primary-hero">
                   {group.title}
                 </h2>
               </FadeIn>
@@ -141,22 +141,26 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Driven by Purpose, Powered by Collaboration">
+      <PageIntro eyebrow="About us" title={
+          <>
+            Driven by <span className='text-primary-hero'>Purpose</span>, <span className='text-primary-hero'>Powered</span> by Collaboration
+          </>
+        }>
         <p>
           Our strength lies in understanding our clients’ goals deeply, crafting each solution 
           through a collaborative process that keeps their vision at the forefront of every decision.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Founded by four <span className='text-primary-hero'>friends</span> with a love for <span className='text-primary-hero'>coding</span> and collaboration, 
-            Summit <span className='text-primary-hero'>Dev</span>Labs is all about close partnerships and <span className='text-primary-hero'>creative</span> problem-solving. 
-            We believe the best solutions come from truly understanding our clients’ <span className='text-primary-hero'>goals </span> 
-            and working together to bring them to <span className='text-primary-hero'>life</span>. Our <span className='text-primary-hero'>journey</span> began with a shared <span className='text-primary-hero'>passion</span>, 
-            and it thrives through the unique challenges and successes of our <span className='text-primary-hero'>clients</span>.
+            Founded by four <span className='text-primary-hero font-semibold'>friends</span> with a love for <span className='text-primary-hero font-semibold'>coding</span> and collaboration, 
+            Summit <span className='text-primary-hero'>Dev</span>Labs is all about close partnerships and <span className='text-primary-hero font-semibold'>creative</span> problem-solving. 
+            We believe the best solutions come from truly understanding our clients’ <span className='text-primary-hero font-semibold'>goals </span> 
+            and working together to bring them to <span className='text-primary-hero font-semibold'>life</span>. Our <span className='text-primary-hero font-semibold'>journey</span> began with a shared <span className='text-primary-hero font-semibold'>passion</span>, 
+            and it thrives through the unique challenges and successes of our <span className='text-primary-hero font-semibold'>clients</span>.
           </p>
           <p>
             At Summit <span className='text-primary-hero'>Dev</span>Labs, you’re not just hiring developers — 
-            you’re gaining a <span className='text-primary-hero'>team</span> of dedicated <span className='text-primary-hero'>partners</span>, here to help you reach your digital <span className='text-primary-hero'>summit</span>.
+            you’re gaining a <span className='text-primary-hero font-semibold'>team</span> of dedicated <span className='text-primary-hero font-semibold'>partners</span>, here to help you reach your digital <span className='text-primary-hero font-semibold'>summit</span>.
           </p>
         </div>
       </PageIntro>
