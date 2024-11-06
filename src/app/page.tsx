@@ -109,9 +109,9 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Client-focused development studio based in Pittsburgh.
+            Client-focused development studio based in <span className="text-primary-hero">Pittsburgh</span>.
           </h1>
-          <p className="mt-6 text-xl text-neutral-600">
+          <p className="mt-6 text-xl text-neutral-600 mb-24">
             We are a software solutions company that specializes in web and ecommerce development. We are a team of developers who are dedicated to creating the best possible product for our clients.
           </p>
         </FadeIn>

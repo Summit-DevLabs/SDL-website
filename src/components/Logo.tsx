@@ -81,7 +81,7 @@ export function Logo({
         fontSize="20" // Adjust the font size as needed
         fill={invert ? 'white' : 'black'} // Change text color based on invert
       >
-        | Summit DevLabs
+        | Summit <tspan fill='#587F3B'>Dev</tspan>Labs
       </text>
     </svg>
   )

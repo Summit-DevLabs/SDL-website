@@ -110,7 +110,7 @@ export function Footer() {
             <Logo className="h-8" fillOnHover />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Summit Dev Labs {new Date().getFullYear()}
+            © Summit DevLabs {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>
