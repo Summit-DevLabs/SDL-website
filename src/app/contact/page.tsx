@@ -22,7 +22,7 @@ function ContactDetails() {
         Our offices
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Summit DevLabs operates remotely, with team members based in Pittsburgh, PA and Detroit, MI. 
+        Summit <span className='text-primary-hero'>Dev</span>Labs operates remotely, with team members based in Pittsburgh, PA and Detroit, MI. 
         While we may not have a traditional office, we’re always connected and ready to work 
         with you, wherever you are.
       </p>
