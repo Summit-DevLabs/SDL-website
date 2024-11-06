@@ -1,7 +1,5 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
-
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -9,18 +7,21 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import  CaseStudies  from '@/components/CaseStudies'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+import CaseStudies from '@/components/CaseStudies'
+import logoP412 from '@/images/clients/project412/p412.png'
+import logoTGV from '@/images/clients/trestle-glen-vineyards/TGV-logo.jpg'
+import logoTAC from '@/images/clients/the-aligned-clinic/TAC-logo.jpg'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
 import MissionStatement from '@/components/MissionStatement'
+import { log } from 'console'
 
+// **** When adding more clients to this list, make sure you update the lg:grid-cols layout in the Clients component below ****
 const clients = [
-  ['Trestle Glen Vineyards', logoPhobiaLight],
-  ['The Aligned Clinic', logoPhobiaLight],
-  ['Michigan Memorial Funeral Home', logoUnseal],
+  ['Project412', logoP412],
+  ['The Aligned Clinic', logoTAC],
+  // ['Michigan Memorial Funeral Home', logoUnseal],
+  ['Trestle Glen Vineyards', logoTGV],
 ]
 
 function Clients() {
@@ -36,12 +37,14 @@ function Clients() {
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 justify-items-center items-center"
           >
             {clients.map(([client, logo]) => (
-              <li key={client}>
+              <li key={client.toString()} className="flex justify-center items-center">
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <div className="w-42 h-32 flex justify-center items-center">
+                    <Image src={logo} alt={client.toString()} unoptimized className="object-contain w-full h-full" />
+                  </div>
                 </FadeIn>
               </li>
             ))}
@@ -101,7 +104,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
+  let caseStudies = (await loadCaseStudies()).slice(0, 2)
 
   return (
     <>
@@ -116,8 +119,7 @@ export default async function Home() {
         </FadeIn>
       </Container>
 
-      {/* uncomment this section when we get more logos */}
-      {/* <Clients /> */}
+      <Clients />
 
       <CaseStudies caseStudies={caseStudies} />
 
@@ -125,14 +127,12 @@ export default async function Home() {
 
       <Services />
 
-      {/* <Testimonial
+      <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40 text-primary-hero"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'The Aligned Clinic', logo: logoTAC }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
-      </Testimonial> */}
+        The team at Summit DevLabs went above and beyond with our branding website, and we couldn't be happier with the results. They were professional, responsive, and delivered a product that exceeded our expectations.
+      </Testimonial>
 
       <ContactSection />
     </>
