@@ -31,20 +31,20 @@ function Culture() {
         <GridList>
           <GridListItem title="Transparent Communication" invert>
             <br></br>
-            We believe that open, honest dialogue is key to every successful project. 
-            Our team values clear and consistent communication, ensuring that our clients are informed 
+            We believe that open, honest dialogue is key to every successful project.
+            Our team values clear and consistent communication, ensuring that our clients are informed
             and engaged at every step of the process.
           </GridListItem>
           <GridListItem title="Quality with Precision" invert>
             <br></br>
             Every line of code matters, and we’re dedicated to getting it right the first time.
-            We approach each project with a meticulous focus on quality, aiming to deliver solutions 
+            We approach each project with a meticulous focus on quality, aiming to deliver solutions
             that meet the highest standards in functionality and design.
           </GridListItem>
           <GridListItem title="Trust and Integrity" invert>
             <br></br>
             We’re committed to building trust through transparency and accountability.
-            Integrity is the foundation of our team’s work — we’re dedicated to delivering 
+            Integrity is the foundation of our team’s work — we’re dedicated to delivering
             on our promises and being upfront about challenges along the way.
           </GridListItem>
         </GridList>
@@ -59,23 +59,27 @@ const team = [
     people: [
       {
         name: 'David Cerniglia',
-        title: 'Software Developer',
+        title: 'Senior Software Developer',
         image: { src: imageDavidCerniglia },
+        founder: true,
       },
       {
         name: 'Shawn Wilson',
-        title: 'Software Developer',
+        title: 'Senior Software Developer',
         image: { src: imageShawnWilson },
+        founder: true,
       },
       {
         name: 'Jesse Walls',
-        title: 'Software Developer',
+        title: 'Dev Ops Engineer',
         image: { src: imageJesseWalls },
+        founder: true,
       },
       {
         name: 'Jeremiah Williams',
-        title: 'Software Developer',
+        title: 'Front-End Developer',
         image: { src: imageJeremiahWilliams },
+        founder: true,
       },
     ],
   },
@@ -90,7 +94,7 @@ function Team() {
             <Border as={FadeIn} />
             <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                <h2 className="font-display text-2xl font-semibold text-primary-hero">
                   {group.title}
                 </h2>
               </FadeIn>
@@ -112,8 +116,11 @@ function Team() {
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
                               {person.name}
                             </p>
-                            <p className="mt-1 text-sm text-white">
+                            <p className="mt-3 text-sm text-white">
                               {person.title}
+                            </p>
+                            <p className="text-sm text-white">
+                              {person?.founder ? 'Founder' : ''}
                             </p>
                           </div>
                         </div>
@@ -141,22 +148,26 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Driven by Purpose, Powered by Collaboration">
+      <PageIntro eyebrow="About us" title={
+          <>
+            Driven by <span className='text-primary-hero'>Purpose</span>, <span className='text-primary-hero'>Powered</span> by Collaboration
+          </>
+        }>
         <p>
-          Our strength lies in understanding our clients’ goals deeply, crafting each solution 
+          Our strength lies in understanding our clients’ goals deeply, crafting each solution
           through a collaborative process that keeps their vision at the forefront of every decision.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Founded by four friends with a love for coding and collaboration, 
-            Summit DevLabs is all about close partnerships and creative problem-solving. 
-            We believe the best solutions come from truly understanding our clients’ goals 
-            and working together to bring them to life. Our journey began with a shared passion, 
-            and it thrives through the unique challenges and successes of our clients.
+            Founded by four <span className='text-primary-hero font-semibold'>friends</span> with a love for <span className='text-primary-hero font-semibold'>coding</span> and collaboration, 
+            Summit <span className='text-primary-hero'>Dev</span>Labs is all about close partnerships and <span className='text-primary-hero font-semibold'>creative</span> problem-solving. 
+            We believe the best solutions come from truly understanding our clients’ <span className='text-primary-hero font-semibold'>goals </span> 
+            and working together to bring them to <span className='text-primary-hero font-semibold'>life</span>. Our <span className='text-primary-hero font-semibold'>journey</span> began with a shared <span className='text-primary-hero font-semibold'>passion</span>, 
+            and it thrives through the unique challenges and successes of our <span className='text-primary-hero font-semibold'>clients</span>.
           </p>
           <p>
-            At Summit DevLabs, you’re not just hiring developers — 
-            you’re gaining a team of dedicated partners, here to help you reach your digital summit.
+            At Summit <span className='text-primary-hero'>Dev</span>Labs, you’re not just hiring developers — 
+            you’re gaining a <span className='text-primary-hero font-semibold'>team</span> of dedicated <span className='text-primary-hero font-semibold'>partners</span>, here to help you reach your digital <span className='text-primary-hero font-semibold'>summit</span>.
           </p>
         </div>
       </PageIntro>

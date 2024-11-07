@@ -18,12 +18,11 @@ export default function CaseStudies({
           className="mt-24 sm:mt-32 lg:mt-40"
         >
           <p>
-            We believe technology is the answer to the world’s greatest
-            challenges. It’s also the cause, so we find ourselves in bit of a
-            catch 22 situation.
+          We’ve had the pleasure of working with a diverse range of clients on
+          projects that span a wide range of industries. 
           </p>
         </SectionIntro>
-        <Container className="mt-16">
+        <Container className="mt-16 mb-16">
           <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {caseStudies.map((caseStudy) => (
               <FadeIn key={caseStudy.href} className="flex">
@@ -49,7 +48,7 @@ export default function CaseStudies({
                     <span className="text-neutral-300" aria-hidden="true">
                       /
                     </span>
-                    <span>Case study</span>
+                    <span>Project</span>
                   </p>
                   <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
                     {caseStudy.title}

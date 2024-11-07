@@ -42,7 +42,7 @@ function Section({
               className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
             />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-primary-hero sm:text-4xl">
               {title}
             </h2>
             <div className="mt-6">{children}</div>
@@ -116,7 +116,7 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Delivery" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           As we approach the conclusion of the Build phase, we review each project 
@@ -155,10 +155,14 @@ function Values() {
 
       <SectionIntro
         eyebrow="Our values"
-        title="Trustworthy Solutions in a Dynamic World"
+        title={
+          <>
+            <span className='text-primary-hero'>Trustworthy</span> Solutions in a <span className='text-primary-hero'>Dynamic</span> World
+          </>
+        }
       >
         <p>
-          At Summit DevLabs, we cultivate a culture of trust by being 
+          At Summit <span className='text-primary-hero'>Dev</span>Labs, we cultivate a culture of trust by being 
           adaptable to the changing landscape of technology while honoring 
           the proven strategies that serve our clients best. Our commitment 
           to quality and reliability is at the heart of everything we do.

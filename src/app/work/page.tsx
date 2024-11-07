@@ -10,8 +10,10 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
+import logoTAC from '@/images/clients/the-aligned-clinic/TAC-logo.jpg'
+import logoTGV from '@/images/clients/trestle-glen-vineyards/TGV-logo.jpg'
+import logoP412 from '@/images/clients/project412/p412.png'
 import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
 import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
@@ -30,11 +32,11 @@ function CaseStudies({
     <Container className="mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Case studies
+          Some of our recent work
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
-        {caseStudies.map((caseStudy) => (
+        {caseStudies.splice(0, 2).map((caseStudy) => (
           <FadeIn key={caseStudy.client}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
@@ -43,7 +45,7 @@ function CaseStudies({
                     <Image
                       src={caseStudy.logo}
                       alt=""
-                      className="h-16 w-16 flex-none"
+                      className="h-20 w-20 flex-none"
                       unoptimized
                     />
                     <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
@@ -75,7 +77,7 @@ function CaseStudies({
                       href={caseStudy.href}
                       aria-label={`Read case study: ${caseStudy.client}`}
                     >
-                      Read case study
+                      Explore the project
                     </Button>
                   </div>
                   {caseStudy.testimonial && (
@@ -97,14 +99,17 @@ function CaseStudies({
 }
 
 const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  // ['Phobia', logoPhobia],
+  // ['Family Fund', logoPhobia],
+  // ['Unseal', logoUnseal],
+  // ['Mail Smirk', logoMailSmirk],
+  // ['Home Work', logoHomeWork],
+  // ['Green Life', logoGreenLife],
+  // ['Bright Path', logoBrightPath],
+  // ['North Adventures', logoNorthAdventures],
+  ['The Aligned Clinic', logoTAC],
+  ['Trestle Glen Vineyards', logoTGV],
+  ['P412', logoP412],
 ]
 
 function Clients() {
@@ -122,10 +127,10 @@ function Clients() {
           className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
         >
           {clients.map(([client, logo]) => (
-            <li key={client} className="group">
+            <li key={client.toString()} className="group">
               <FadeIn className="overflow-hidden">
                 <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px">
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image src={logo} alt={client.toString()} unoptimized />
                 </Border>
               </FadeIn>
             </li>
@@ -153,8 +158,7 @@ export default async function Work() {
       >
         <p>
           We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          best value to our clients. Our work is a testament to our commitment.
         </p>
       </PageIntro>
 
@@ -162,10 +166,9 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
+        client={{ name: 'The Aligned Clinic', logo: logoTAC }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+        We approached <em>Summit DevLabs</em> because we believed they could help us achieve our vision.
       </Testimonial>
 
       <Clients />

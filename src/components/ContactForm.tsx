@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { sendToDiscord } from '@/lib/formHandler';
 import { Button } from '@/components/Button'
 import { FadeIn } from '@/components/FadeIn'
+import ConfirmationModal from './ConfirmationModal';
 
 function TextInput({
     label,
@@ -53,17 +54,30 @@ function TextInput({
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
     const [budget, setBudget] = useState('');
+    const [errors, setErrors] = useState({name: '', email: '', company: '', phone: '', message: '', budget: ''});
+    const [isModalOpen, setIsModalOpen] = useState(false);
   
+    const validate = () => {
+      let tempErrors = { name: '', email: '', company: '', phone: '', message: '', budget: '' };
+      if (!name) tempErrors.name = 'Name is required';
+      if (!email) tempErrors.email = 'Email is required';
+      else if (!/\S+@\S+\.\S+/.test(email)) tempErrors.email = 'Email is invalid';
+      setErrors(tempErrors);
+      return Object.values(tempErrors).every(x => x === '');
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
-  
-      const formData = { name,email, company, phone, message, budget };
-  
-      try {
-        await sendToDiscord(formData);
-        alert('Information sent successfully');
-      } catch (error) {
-        alert('Failed to send information');
+
+      const formData = { name, email, company, phone, message, budget };
+
+      if (validate()) {
+        try {
+          await sendToDiscord(formData);
+          setIsModalOpen(true);
+        } catch (error) {
+          alert('Failed to send information.');
+        }
       }
     };
   
@@ -76,12 +90,13 @@ function TextInput({
           <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
             <TextInput
               label="Name"
-              type="name"
+              type="text"
               name="name"
               autoComplete="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
+            {errors.name && <p className="text-red-500">{errors.name}</p>}
             <TextInput
               label="Email"
               type="email"
@@ -90,10 +105,11 @@ function TextInput({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+            {errors.email && <p className="text-red-500">{errors.email}</p>}
             <TextInput
               label="Company"
+              type="text"
               name="company"
-              autoComplete="organization"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
             />
@@ -151,6 +167,7 @@ function TextInput({
             Let’s work together
           </Button>
         </form>
+        {isModalOpen && <ConfirmationModal onClose={() => setIsModalOpen(false)} />}
       </FadeIn>
     )
   }

@@ -51,7 +51,7 @@ export function GridListItem({
           <strong
             className={clsx(
               'font-semibold',
-              invert ? 'text-white' : 'text-neutral-950',
+              invert ? 'text-neutral-50' : 'text-primary-hero',
             )}
           >
             {title}.
