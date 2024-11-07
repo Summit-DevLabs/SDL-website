@@ -10,7 +10,8 @@ import { Testimonial } from '@/components/Testimonial'
 import CaseStudies from '@/components/CaseStudies'
 import logoP412 from '@/images/clients/project412/p412.png'
 import logoTGV from '@/images/clients/trestle-glen-vineyards/TGV-logo.jpg'
-import logoTAC from '@/images/clients/the-aligned-clinic/TAC-logo.jpg'
+import logoTACwhite from '@/images/clients/the-aligned-clinic/TAC-logo.jpg'
+import logoTACblack from '@/images/clients/the-aligned-clinic/TAC-logo-no-background.png'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
 import MissionStatement from '@/components/MissionStatement'
@@ -19,7 +20,7 @@ import { log } from 'console'
 // **** When adding more clients to this list, make sure you update the lg:grid-cols layout in the Clients component below ****
 const clients = [
   ['Project412', logoP412],
-  ['The Aligned Clinic', logoTAC],
+  ['The Aligned Clinic', logoTACwhite],
   // ['Michigan Memorial Funeral Home', logoUnseal],
   ['Trestle Glen Vineyards', logoTGV],
 ]
@@ -133,9 +134,9 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40 text-primary-hero"
-        client={{ name: 'The Aligned Clinic', logo: logoTAC }}
+        client={{ name: 'The Aligned Clinic', logo: logoTACblack }}
       >
-        The team at Summit DevLabs went above and beyond with our branding website, and we couldn't be happier with the results. They were professional, responsive, and delivered a product that exceeded our expectations.
+        The team at Summit <span className="text-primary-hero">Dev</span>Labs went above and beyond with our branding website, and we couldn't be happier with the results. They were professional, responsive, and delivered a product that exceeded our expectations.
       </Testimonial>
 
       <ContactSection />
