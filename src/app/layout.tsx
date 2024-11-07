@@ -1,9 +1,7 @@
 import { type Metadata } from 'next'
 import Head from 'next/head'
 import { RootLayout } from '@/components/RootLayout'
-import logo from '@/images/assets/SDL_Logo_float.png'
 import '@/styles/tailwind.css'
-import { Logo } from '@/components/Logo'
 
 export const metadata: Metadata = {
   title: {
