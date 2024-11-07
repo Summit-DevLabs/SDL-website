@@ -18,7 +18,7 @@ import { log } from 'console'
 
 // **** When adding more clients to this list, make sure you update the lg:grid-cols layout in the Clients component below ****
 const clients = [
-  ['Project412', logoTAC],
+  ['Project412', logoP412],
   ['The Aligned Clinic', logoTAC],
   // ['Michigan Memorial Funeral Home', logoUnseal],
   ['Trestle Glen Vineyards', logoTGV],
